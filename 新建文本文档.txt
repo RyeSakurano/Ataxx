@@ -1,0 +1,47 @@
+void mode() // 难度模式
+{
+	putimage(0, 0, &background);
+	settextstyle(30, 0, _T("黑体"));
+	setbkmode(TRANSPARENT);
+
+	// 难度模式图和字
+	RECT EASY = { 200, 400, 300, 500 };
+	drawtext(_T("EASY"), &EASY, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	RECT NORMAL = { 450, 400, 550, 500 };
+	drawtext(_T("NORMAL"), &NORMAL, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	RECT HARD = { 700, 400, 800, 500 };
+	drawtext(_T("HARD"), &HARD, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+	putimage(150, 150, &ayumi);
+	putimage(400, 150, &sonoko);
+	putimage(650, 150, &shukichi);
+	settextstyle(20, 0, _T("黑体"));
+	RECT tip = { 0, 500, 1000, 550 };
+	drawtext(_T("Please click the pictures"), &tip, DT_CENTER | DT_VCENTER | DT_SINGLELINE);
+
+	// 点击选择
+	while (1)
+	{
+		m = GetMouseMsg();
+		if (m.mkLButton)
+		{
+			if (m.x > 150 && m.x < 350 && m.y > 150 && m.y < 350)
+			{
+				FlushMouseMsgBuffer();
+				MODE = 1;
+				return;
+			}
+			if (m.x > 400 && m.x < 600 && m.y > 150 && m.y < 350)
+			{
+				FlushMouseMsgBuffer();
+				MODE = 2;
+				return;
+			}
+			if (m.x > 650 && m.x < 850 && m.y > 150 && m.y < 350)
+			{
+				FlushMouseMsgBuffer();
+				MODE = 3;
+				return;
+			}
+		}
+	}
+}

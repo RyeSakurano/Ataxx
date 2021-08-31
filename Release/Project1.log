@@ -1,0 +1,8 @@
+﻿  Akai-negamax+剪枝dddd.cpp
+Akai-negamax+剪枝dddd.cpp(84): warning C4101: “dir”: 未引用的局部变量
+  正在生成代码
+  2 of 199 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    12 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  Project1.vcxproj -> F:\Reikun\pku\专业课\计概\ataxx\ataxx三选一最终版\Release\Project1.exe
